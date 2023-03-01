@@ -20,3 +20,12 @@
     justify-content: center;
     align-items: center;
 }
+
+@media (prefers-color-scheme: dark) {
+    .myModal {
+        background: rgba(0,0,0, 0.5);
+    }
+    .myModalContent {
+        background: #161616;
+    }
+}

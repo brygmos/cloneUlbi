@@ -17,6 +17,7 @@ const PostForm = ({create}) => {
 
     return (
         <form>
+            <p>Создание поста</p>
             {/*Управляемый компонент*/}
             <MyInput
                 value={post.title}
