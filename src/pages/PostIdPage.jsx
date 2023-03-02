@@ -27,7 +27,7 @@ const PostIdPage = () => {
             <h1>Вы открыли страницу поста c ID = {params.id}</h1>
             {isLoading
                 ? <Loader/>
-                :  <div>{post.id}. {post.title}</div>
+                :  <h2>{post.id}. {post.title}</h2>
             }
             <h1>
                 Комментарии
