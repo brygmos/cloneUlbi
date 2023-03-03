@@ -9,4 +9,12 @@ const MyButton = ({children, ...props}) => {
     );
 };
 
+export const MyDangerButton = ({children, ...props}) => {
+    return (
+        <button {...props} className={classes.dangerBtn}>
+            {children}
+        </button>
+    );
+};
+
 export default MyButton;

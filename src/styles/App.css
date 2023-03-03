@@ -16,12 +16,16 @@
 
 .post {
   display: flex;
-  padding: 15px;
+  padding: 30px;
   background-color: #cff3d3;
   border-radius: 8px;
   margin-top: 15px;
   justify-content: space-between;
   align-items: center;
+}
+
+.post__content {
+  margin-right: 30px;
 }
 
 .post__btns {
