@@ -1,5 +1,5 @@
 import React, {useContext} from 'react';
-import {Link} from "react-router-dom";
+import {NavLink} from "react-router-dom";
 import MyButton from "../button/MyButton";
 import {AuthContext} from "../../../context";
 import cl from './Navbar.module.css';
@@ -15,10 +15,10 @@ const Navbar = () => {
     return (
         <div className={cl.navbar}>
             <div className={cl.navbar__links}>
-                <Link className={cl.navbar__link} to="/">Главная </Link>
-                <Link className={cl.navbar__link} to="/posts">Посты</Link>
-                <Link className={cl.navbar__link} to="/profile">Кабинет</Link>
-                <Link className={cl.navbar__link} to="/about">О сайте </Link>
+                <NavLink className={({isActive}) => isActive ? cl.navbar__link_active : cl.navbar__link} to="/">Главная </NavLink>
+                <NavLink className={({isActive}) => isActive ? cl.navbar__link_active : cl.navbar__link} to="/posts">Посты</NavLink>
+                <NavLink className={({isActive}) => isActive ? cl.navbar__link_active : cl.navbar__link} to="/profile">Кабинет</NavLink>
+                <NavLink className={({isActive}) => isActive ? cl.navbar__link_active : cl.navbar__link} to="/about">О сайте </NavLink>
             </div>
             <MyButton onClick={logout}>
                 Выйти

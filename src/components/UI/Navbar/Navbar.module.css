@@ -12,23 +12,39 @@
 }
 
 .navbar__links {
-    /*margin-left: auto;*/
     margin: 0 30px;
 }
 
 .navbar__link {
-    margin: 0 10px;
     color: #213547;
+    margin: 0 10px;
+}
+.navbar__link:hover {
+    color: #8443c8;
+}
+
+.navbar__link_active {
+    color: #8443c8;
+    margin: 0 10px;
+}
+.navbar__link_active:hover {
+    color: #9a4fea;
 }
 
 @media (prefers-color-scheme: dark) {
     .navbar {
         background: #161616;
     }
-    .navbar__links a {
-        color: #bd84f8;;
+    .navbar__link {
+        color: #bd84f8;
     }
-    .navbar__links a:hover {
+    .navbar__link:hover {
         color: white;
+    }
+    .navbar__link_active {
+        color: #feffff;
+    }
+    .navbar__link_active:hover {
+        color: #feffff;
     }
 }
