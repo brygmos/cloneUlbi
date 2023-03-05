@@ -77,6 +77,15 @@ function Posts() {
                     {value: -1, name: 'Показать все'},
                 ]}
             />
+            <MySelect
+                value={limit}
+                onChange={value => console.log(value)}
+                defaultValue="Отображение постов"
+                options={[
+                    {value: 0, name: 'Постранично'},
+                    {value: -1, name: 'Загружать постепенно'},
+                ]}
+            />
             {postError &&
             <h1>Произошла ошибка ${postError}</h1>
             }

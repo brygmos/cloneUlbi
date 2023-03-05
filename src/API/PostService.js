@@ -22,6 +22,10 @@ export default class PostService {
     }
 
     static async getPostsByUserId(id) {
-        const response = await axios.get(`https://jsonplaceholder.typicode.com/users/${id}/posts`)
+        const response = await axios.get(`https://jsonplaceholder.typicode.com/users/${id}/posts`);
+        return response
     }
 }
+
+// let posts = await PostService.getPostsByUserId(1)
+//     console.log(posts.data)
