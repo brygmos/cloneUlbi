@@ -23,17 +23,14 @@ const Profile = () => {
     useEffect(() => {fetchPosts(userId)},[userId])
 
     return (
-        <UserContext.Consumer>
+        <UserContext.Provider value={{userId, setUserId}}>
             <h1>
                 Личный кабинет id = {userId}
             </h1>
-            <p>Мои посты</p>
-            {/*{posts.map((post, index) =>*/}
-            {/*    <div key={post.id}>*/}
-            {/*        <PostItem remove={''} number={index + 1} post={post} />*/}
-            {/*    </div>*/}
-            {/*)}*/}
-        </UserContext.Consumer>);
+            <PostList posts={posts} title={'Мои посты'}>
+            </PostList>
+        </UserContext.Provider>
+    )
 }
 
 export default Profile
